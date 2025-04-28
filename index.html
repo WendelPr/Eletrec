@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!--   Nycolas Augusto 38946297
+    wendel do prado oliveira 40533671  -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eletrec</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./login.js" defer></script>
+</head>
+<body id="inicio">
+    <header>
+        <nav>
+            <a href="#inicio">
+                <img src="./images/menu.png" alt="Menu" class="imgmenu">
+            </a>
+            <a href="#loja11">Loja</a> 
+            <a href="#produtos">Produtos</a> 
+           
+            <a href="./carrinho.html">Carrinho</a> 
+            <a href="#admin" id="abreDialog">Admin</a> 
+        </nav>   
+    </header>
+    <main>
+        <h1 class="logo">Eletrec</h1>
+        <div id="loja11">
+            <section class="nossaLoja1">
+                <div class="section1">
+                    <div class="text1">
+                        <h2>Sobre Nós</h2>
+                        <p>Bem-vindo à nossa loja! Oferecemos os mais recentes produtos de tecnologia, incluindo smartphones, laptops, acessórios e muito mais, sempre com preços acessíveis e alta qualidade. Nossa missão é trazer inovação e praticidade para o seu dia a dia.</p>
+                    </div>
+                    <div class="image1">
+                        <img src="./images/gaming-msi-header.png" alt="Imagem de destaque">
+                    </div>
+                </div>
+            </section>
+        </div>
+        <section id="produtos">
+            <h1>Nossos produtos</h1>
+            <div class="produtos-container">
+                <div class="produto" >
+                    <img src="./images/products/product-1.png" alt="Notbooks">
+                    <h3>Notebooks</h3>
+                </div>
+                <div class="produto" >
+                    <img src="./images/products/product-11.png" alt="Smartphone pro 2">
+                    <h3>Smartphones</h3>
+                </div>
+                <div class="produto" >
+                    <img src="./images/products/product-14.png" alt="PS5">
+                    <h3>Videogames</h3>    
+                </div>
+                <div class="produto" >
+                    <img src="./images/products/product-7.png" alt="Cadeira Gamer">
+                    <h3>Cadeiras Gamer</h3>                
+                </div>
+                <div class="produto" >
+                    <img src="./images/products/product-8.png" alt="Televisores">
+                    <h3>Televisores</h3>                       
+                </div>
+                <div class="produto" >
+                    <img src="./images/products/cpu.png" alt="computadores">
+                    <h3>Computadores</h3>                    
+                </div>
+                <div class="produto" >
+                    <img src="./images/products/monitor.png" alt="monitores">
+                    <h3>Monitores</h3>                   
+                </div>
+                <div class="produto" >
+                    <img src="./images/products/acessorios.png" alt="acessórios">
+                    <h3>Acessórios</h3>                    
+                </div>
+            
+        </section>
+        
+        <section id="depoimentos">
+            <h2>O que nossos clientes dizem</h2>
+            <div class="depoimento">
+                <p>"Produtos de excelente qualidade e entrega rápida. Muito satisfeita com a compra!"</p>
+                <p>- João Silva</p>
+            </div>
+            <div class="depoimento">
+                <p>"O atendimento é fantástico, sempre tiram todas as minhas dúvidas. Recomendo!"</p>
+                <p>- Maria Oliveira</p>
+            </div>
+            <div class="depoimento">
+                <p>"Variedade incrível e preços muito competitivos. Minha primeira escolha para tecnologia."</p>
+                <p>- Pedro Almeida</p>
+            </div>
+        </section>
+        
+        <footer>
+            <p>© 2024 Eletrec Todos os direitos reservados.</p>
+        </footer>
+    </main>
+    <dialog id="login">
+        <form>
+            <h2>Login</h2>
+            <label for="email">E-mail: </label>
+            <input type="text" name="email" id="email"><br>
+            <label for="senha">Senha: </label>
+            <input type="password" name="senha" id="senha"><br>
+            <button type="button" id="btnFechar">Sair</button>
+            <button type="submit">Entrar</button>
+        </form>
+    </dialog>
+</body>
+</html>

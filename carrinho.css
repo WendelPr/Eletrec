@@ -1,0 +1,291 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column; 
+    background-color: #f8f9fa;
+    color: #021120;
+    min-height: 100vh;
+    position: relative;
+}
+
+
+nav {
+    background-color: #003366;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px; 
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+nav a {
+    color: #ffffff;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 10px 20px;
+    width: 100%;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #66ccff;
+    font-weight: bold;
+    color: #003366;
+}
+
+
+main {
+    margin-left: 200px; 
+    flex: 1;
+    padding: 20px;
+    background-color: #f8f9fa;
+    overflow-x: hidden;
+    transition: margin-left 0.3s ease;
+    min-height: calc(100vh - 40px); 
+}
+
+
+#carrinho {
+    background-color: #143f6b;
+    padding: 20px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 800px;
+    position: relative;
+    z-index: 1;
+    overflow: auto;
+}
+
+form {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin: 10px 0;
+    color: #ffffff;
+}
+
+select, input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: calc(100% - 20px);
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #021120;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #042342;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #021120;
+    color: #ffffff;
+}
+
+tbody td {
+    background-color: #eaeaea;
+}
+
+
+footer {
+    background-color: #003366;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: calc(100% - 200px); 
+    margin-left: 200px;
+    font-size: 14px;
+    z-index: 999;
+}
+
+
+@media (max-width: 320px) {
+    
+    nav {
+        position: relative;
+        width: 100%; 
+        height: auto;  
+        flex-direction: row; 
+        justify-content: space-around;
+        padding: 10px 0; 
+    }
+    
+    nav a {
+        font-size: 14px; 
+        padding: 5px 10px; 
+    }
+    
+    
+    main {
+        margin-left: 0; 
+        padding: 10px; 
+    }
+
+    #carrinho {
+        padding: 10px;
+        width: 100%; 
+        box-sizing: border-box; 
+    }
+
+    table, label, input, select, button {
+        font-size: 12px; 
+    }
+
+    button {
+        padding: 8px 12px; 
+    }
+
+    table {
+        font-size: 10px; 
+    }
+
+    footer {
+        width: 100%; 
+        margin-left: 0; 
+    }
+}
+
+
+@media (max-width: 375px) {
+    nav {
+        position: relative;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 10px 0;
+    }
+
+    nav a {
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+
+    main {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    #carrinho {
+        padding: 15px;
+        width: 100%;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    footer {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+.sucesso-msg, .erro-msg {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px; 
+    margin-top: 15px;
+}
+
+.sucesso-msg {
+    background-color: #4CAF50; 
+    color: white;
+    border: 1px solid #388E3C;
+}
+
+
+.erro-msg {
+    background-color: #F44336; 
+    color: white;
+    border: 1px solid #D32F2F;
+}
+
+
+@media (max-width: 375px) {
+    .sucesso-msg, .erro-msg {
+        font-size: 14px; 
+    }
+}
+@media (max-width: 627px) {
+    nav {
+        position: relative;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 10px 0;
+    }
+
+    nav a {
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+
+    main {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    #carrinho {
+        padding: 15px;
+        width: 100%;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    footer {
+        width: 100%;
+        margin-left: 0;
+    }
+
+}

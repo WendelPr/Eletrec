@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produtos</title>
+    <script src="./novo.js" defer></script>
+    <script src="./login.js" defer></script>
+    <link rel="stylesheet" href="./admin.css">
+</head>
+
+<body>
+    <header>
+        <p>ADMINISTRAÇÃO</p> &nbsp;
+        <a href="./novo.html">Cadastro de Produtos</a> 
+        <a href="./admin.html">Estoque</a>
+        <button id="logout">Sair</button>
+    </header>    
+
+    <main>
+        <h1>Cadastrar Produtos</h1>
+        <section id="cadastroP">
+            <form id="novosProdutos">
+                <label for="Codigo">Código do Produto:</label>
+                <input type="number" id="codigoProduto" required placeholder="Código do Produto" min="1" max="1000">
+
+                <label for="nomeProduto">Nome do Produto:</label> 
+                <input type="text" id="nomeProduto" required placeholder="Nome do produto">
+                
+                <label for="preco">Preço:</label>
+                <input type="number" id="preco" min="0" step="0.01" max="50000" required placeholder="Preço">
+
+                <label for="nomeFuncionario">Nome do Funcionário:</label> 
+                <input type="text" id="nomeFuncionario" required placeholder="Nome do Funcionário">
+
+                <label for="categoria">Categoria:</label> 
+                <select id="categoria" required>
+                    <option value="">Selecione a Categoria</option>
+                    <option value="notebooks">Notebooks</option>
+                    <option value="smartphones">Smartphones</option>
+                    <option value="videogames">Videogames</option>
+                    <option value="cadeirasGamer">Cadeiras Gamer</option>
+                    <option value="televisores">Televisores</option>
+                    <option value="computadores">Computadores</option>
+                    <option value="monitores">Monitores</option>
+                    <option value="acessorios">Acessórios</option>
+                </select>
+
+                <button type="submit">Adicionar Produto</button>
+            </form>
+
+            <span id="mensagemEditado1" class="mensagem" style="display: none;">Já existe um produto com este código!</span>
+            <span id="mensagemAdicionado" class="mensagem" style="display: none;">Produto cadastrado com sucesso!</span>
+            <span id="mensagemRemovido" class="mensagem" style="display: none;">Produto removido com sucesso!</span>
+            <span id="mensagemEditado" class="mensagem" style="display: none;">Produto editado com sucesso!</span>
+            <span id="mensagemErroEstoque" class="mensagem" style="display: none;">Ainda há itens deste produto no estoque, não é possível removê-lo</span>
+
+            <table id="tabelaNovo">
+                <thead> 
+                    <tr>
+                        <th>Código do Produto</th>
+                        <th>Nome do Produto</th>
+                        <th>Preço</th>
+                        <th>Nome do Funcionário</th>
+                        <th>Categoria</th> <!-- Coluna de Categoria -->
+                        <th>Ações</th>                   
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Elemec</p>
+    </footer>
+</body>
+</html>

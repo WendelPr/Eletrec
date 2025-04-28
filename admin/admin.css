@@ -1,0 +1,402 @@
+/* Configuração global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: row; 
+    background-color: #888;
+    min-height: 100vh;
+    color: #021120;
+    flex-wrap: nowrap;
+}
+
+header {
+    background: linear-gradient(to top, #061a2e, #143f6b);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px; 
+    height: 100%; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    padding: 20px 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease; 
+}
+
+header p {
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    letter-spacing: 2px; 
+}
+
+header a {
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 10px 20px;
+    width: 100%; 
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+header a:hover {
+    background-color: #66ccff;
+    color: #003366;
+    transform: scale(1.1); 
+}
+
+#logout {
+    margin-top: auto; 
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+#logout:hover {
+    background-color: #042342;
+    color: #66ccff;
+}
+
+
+main {
+    margin-left: 200px; 
+    padding: 20px;
+    flex: 1; 
+    background-color: #888;
+    color: #021120;
+    text-align: center;
+    transition: margin 0.3s ease; 
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin: 10px 0;
+    color: #fff;
+}
+
+select, input, #quantidade {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: calc(100% - 20px); 
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #021120;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #042342;
+}
+
+#cadastroP {
+    text-align: left;
+    background-color: #143f6b;
+    padding: 20px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    margin: 20px auto; 
+    max-width: 800px; 
+}
+#tabelaAdmin{
+    display: flexbox;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #021120;
+    color: #fff;
+}
+
+td {
+    background-color: #eaeaea;
+}
+
+
+
+.mensagem {
+    font-size: 16px;
+    margin-top: 10px;
+    display: none; 
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#mensagemAdicionado {
+    color: #fff;
+    background-color: green;
+}
+
+#mensagemEditado{
+    color: blue;
+    background-color: rgba(156, 223, 253, 0.9);
+}
+
+#mensagemRemovido, #mensagemErroEstoque, #mensagemEditado1 {
+    color: #fff;
+    background-color: rgba(220, 53, 69, 0.9);
+}
+
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column; 
+    }
+
+    header {
+        position: relative;
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    main {
+        margin-left: 0; 
+        padding: 10px;
+    }
+
+    #cadastroP {
+        padding: 10px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+    nav {
+        height: auto; 
+        flex-wrap: wrap; 
+        justify-content: flex-start; 
+    }
+
+    nav a {
+        font-size: 3vw; 
+    }
+
+    .imgmenu {
+        height: 4vw; 
+    }
+
+    .adm {
+        margin-left: 0; 
+    }
+}
+
+@media (max-width: 576px) {
+    header a {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    #cadastroP {
+        padding: 10px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    nav a {
+        font-size: 4vw; 
+    }
+
+    .imgmenu {
+        height: 5vw; 
+    }
+}
+
+@media (max-width: 414px) {
+   
+    body {
+        flex-direction: column;
+    }
+
+   
+    header {
+        position: relative;
+        width: 100%; 
+        height: auto; 
+        flex-direction: row;
+        justify-content: space-around; 
+        align-items: center;
+        padding: 10px;
+        box-shadow: none; 
+    }
+
+    header p {
+        font-size: 16px;
+    }
+
+    header a {
+        font-size: 14px;
+        padding: 5px 8px;
+    }
+
+    #logout {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+
+    
+    main {
+        margin-left: 0;
+        padding: 10px;
+        text-align: left;
+    }
+
+    #cadastroP {
+        padding: 10px;
+        margin: 10px auto;
+    }
+
+    
+    table {
+        font-size: 8px;
+        width: 80%;
+        display: flex; 
+    }
+
+    th,
+    td {
+        padding: 2px;
+        word-wrap: break-word; 
+    }
+    #tabelaAdmin {
+        font-size: 8px;
+    }
+    #tabelaAdmin button{
+        font-size: 8px;
+        
+        padding: 8px;
+    }
+
+}
+
+@media (max-width: 500px){
+    table {
+        font-size: 12px;
+        width: 100%;
+        overflow-x: auto; 
+        display: block; 
+    }
+
+    th,
+    td {
+        padding: 5px;
+        word-wrap: break-word; 
+    }
+}
+
+@media (max-width: 375px) {
+
+    header p {
+        font-size: 14px; 
+    }
+
+    header a {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    nav a {
+        font-size: 3vw; 
+    }
+
+    .imgmenu {
+        height: 5vw; 
+    }
+
+    main {
+        padding: 8px;
+    }
+
+    #cadastroP {
+        padding: 8px;
+    }
+
+    table {
+        font-size: 11px;
+    }
+}
+@media (max-width: 320px) {
+
+    header p {
+        font-size: 14px; 
+    }
+
+    header a {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    nav a {
+        font-size: 3vw;
+    }
+
+    .imgmenu {
+        height: 5vw; 
+    }
+
+    main {
+        padding: 8px;
+    }
+
+    #cadastroP {
+        padding: 8px;
+    }
+
+    table {
+        font-size: 11px; 
+    }
+}
+

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./carrinho.css"> 
+    <title>Carrinho de Compras</title>
+    <script src="./carrinho.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="./index.html">Início</a> &nbsp;
+          
+            <a href="index.html#loja11">Loja</a> &nbsp;
+            <a href="index.html#produtos">Produtos</a> &nbsp;
+            <!--<a href="index.html#depoimentos">Depoimentos</a> &nbsp;-->
+         
+        </nav>
+    </header>
+
+    <main>
+        <h1>Carrinho de Compras</h1>
+
+        <section id="carrinho">
+            <form id="formularioCarrinho">
+                <label for="produto">Produto:</label>
+                <select id="produto" required>
+                    <option value="">Selecione</option>
+                </select>
+        
+                <label for="quantidade">Quantidade:</label>
+                <input type="number" id="quantidade" min="1" value="1">
+        
+                <button type="submit">Adicionar ao Carrinho</button>
+                
+                
+                <span id="produtoJaAdicionado" class="erro-msg" style="display:none;">Produto não disponível em estoque ou quantidade insuficiente.</span>
+                <span id="produtoAdicionado" class="sucesso-msg" style="display:none;">Produto adicionado ao carrinho com sucesso!</span>
+            </form>
+            <table id="tabelaCarrinho">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Código do Produto</th>
+                        <th>Preço</th>
+                        <th>Quantidade</th>
+                        <th>Preço Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <button id="fimC">COMPRAR</button>
+            <button type="reset" id="limparTabela">EXCLUIR CARRINHO</button>
+            <span id="compraFinalizada" style="display:none" class="sucesso-msg">Compra realizada com sucesso!</span>
+            <span id="carrinhoVazio" style="display:none;" class="erro-msg">Carrinho vazio!</span>
+            <span id="CarrinhoLimpo" style="display:none;" class="erro-msg">Carrinho Excluído com sucesso!</span>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Eletrec. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

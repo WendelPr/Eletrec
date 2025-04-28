@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estoque</title>
+    <script src="./admin.js" defer></script>
+    <script src="./login.js" defer></script>
+    <link rel="stylesheet" href="./admin.css">
+</head>
+<body>
+    <header>
+        <p>ADMINISTRAÇÃO</p> &nbsp;
+        <a href="./novo.html">Cadastro de Produtos</a> 
+        <a href="./admin.html">Estoque</a>
+        <button id="logout">Sair</button>
+    </header>
+
+    <main>
+        <h1>Adicionar ao Estoque</h1>
+
+        <section id="cadastroP">
+            <form id="formularioAdmin">
+                <label for="produto">Produto:</label>
+                <select id="produto">
+                    <option value="">Selecione</option>
+                </select>
+        
+                <label for="quantidade">Quantidade:</label>
+                <input type="number" id="quantidade" min="1" value="1">
+        
+                <label for="nomeFuncionario">Nome do Funcionário:</label>
+                <input type="text" id="nomeFuncionario" required placeholder="Nome do Funcionário">
+        
+                <button type="submit">Adicionar ao Estoque</button>
+            </form>
+        
+            <span id="mensagemAdicionado" class="mensagem" style="display: none;">Produto adicionado ao estoque com sucesso!</span>
+            <span id="mensagemEditado" class="mensagem" style="display: none;">Produto editado com sucesso!</span>
+            <span id="mensagemRemovido" class="mensagem" style="display: none;">Produto removido do estoque com sucesso!</span>
+            <span id="mensagemErroEstoque" class="mensagem" style="display: none;">Este produto já está no estoque!</span>
+
+            <table id="tabelaAdmin">
+                <thead>
+                    <tr>
+                        <th>Produto</th>
+                        <th>Código</th>
+                        <th>Preço</th>
+                        <th>Quantidade</th>
+                        <th>Nome do Funcionário</th>
+                        <th>Categoria</th> <!-- Coluna de Categoria -->
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2024 Elemec
+    </footer>
+</body>
+</html>
